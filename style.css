@@ -1,0 +1,874 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        min-height: 100%;
+        /* for firefox */
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    
+    body {
+        font-family: myFont;
+        color: white;
+    }
+    /********  Fonts  **********/
+    
+    @font-face {
+        font-family: myFont;
+        src: url(/fonts/Dosis-Regular.otf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: chalk;
+        src: url(/fonts/EraserRegular.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: title;
+        src: url(/fonts/Archistico_Bold.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: dingbats;
+        src: url(/fonts/Swinging.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: signiture;
+        src: url(/fonts/AlexBrush-Regular.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+    /********  Links etc.  **********/
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #fef200;
+        cursor: pointer;
+    }
+    
+    a:visited {}
+    
+    .active {
+        color: #3B5370;
+    }
+    /********  Containers  **********/
+    
+    .wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column;
+        flex-flow: column;
+    }
+    /********  Header  **********/
+    
+    .header {
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        background-image: url(/images/chalkboard-background.jpg);
+        background-position: center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        z-index: 10;
+    }
+    
+    .title h1 {
+        font-family: title;
+        font-size: 5.5em;
+        padding-bottom: 40px;
+        position: relative;
+        top: 16px;
+    }
+    
+    .title-underline {
+        width: 100%;
+        height: 3px;
+        border-bottom: 3px solid whitesmoke;
+        position: relative;
+        top: 15px;
+    }
+    
+    .eraser {
+        position: absolute;
+        left: 140px;
+        top: 160px;
+    }
+    
+    .chalk {
+        position: absolute;
+        left: 208px;
+        top: 156px;
+    }
+    
+    .chalk-two {
+        position: absolute;
+        left: 240px;
+        top: 169px;
+    }
+    
+    .quote {
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        font-family: chalk;
+    }
+    
+    .quote span {
+        color: #e99488;
+    }
+    
+    .header-social {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    
+    .header-social img {
+        position: relative;
+        right: 10px;
+    }
+    
+    .header-social span {
+        font-family: chalk;
+        color: #c9c6c6;
+        position: relative;
+        right: 10px;
+        top: -5px;
+        font-size: 1.2em;
+    }
+    
+    .header-social a {
+        font-family: chalk;
+        color: #c9c6c6;
+        margin: 10px 0px;
+    }
+    
+    .header-social a:nth-child(2) {
+        position: relative;
+        top: 15px
+    }
+    
+    .header-social a:nth-child(3) {
+        position: relative;
+        top: 25px
+    }
+    
+    .header-call-icon,
+    .header-address-icon {
+        display: none;
+    }
+    /********************  
+About/Gallery/specials  
+*********************/
+    
+    .about-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-flow: row;
+        flex-flow: row;
+        background-color: grey;
+        background-image: url(/images/tie-dye2450x1105.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        height: 650px;
+    }
+    
+    .blur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+        z-index: -1;
+        border-radius: 5px;
+    }
+    
+    .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 95%;
+        height: 85%;
+        position: relative;
+        top: 0px;
+        z-index: 0;
+    }
+    
+    .about-us {
+        min-width: 310px;
+        max-width: 350px;
+        border: 1px solid whitesmoke;
+        margin: 10px;
+    }
+    
+    .about-wrapper h1 {
+        font-family: chalk;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .about-wrapper h3 {
+        padding: 20px;
+    }
+    
+    .menu {
+        text-align: center;
+    }
+    
+    .menu h1 {
+        padding: 10px 0;
+    }
+    
+    .menu p {
+        font-family: dingbats;
+        font-size: 6.5em;
+        position: relative;
+        top: -60px;
+        height: 30px;
+        padding-bottom: 10px;
+    }
+    
+    .gallery {
+        border: 1px solid whitesmoke;
+        margin: 10px;
+        min-width: 0px;
+    }
+    
+    .slider {
+        visibility: hidden;
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .slick-initialized {
+        visibility: visible;
+    }
+    
+    .slider li {
+        cursor: pointer;
+    }
+    
+    .slider img {
+        max-height: 400px;
+    }
+    /**specials**/
+    
+    .specials {
+        min-width: 250px;
+        max-width: 350px;
+        border: 1px solid whitesmoke;
+        margin: 10px;
+    }
+    
+    .specials h1 {
+        padding-bottom: 20px;
+    }
+    
+    .specials-front {
+        width: 95%;
+        height: 100%;
+        background-image: url(/images/frontOfspecials.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    /********  Find Us  **********/
+    
+    .findUs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row;
+        flex-flow: row;
+        height: 100%;
+        background-color: grey;
+        background-image: url(/images/chalkboard-background.jpg);
+        background-position: center center;
+        background-size: cover;
+        font-family: myFont;
+    }
+    
+    .contact {
+        width: 25%;
+        height: 400px;
+        margin: 40px 20px 20px 20px;
+        border-radius: 5px;
+    }
+    
+    .contact-underline {
+        width: 100%;
+        position: relative;
+        top: 70px;
+        left: -20px;
+    }
+    
+    .contact-container {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        top: -85px;
+        left: 25px;
+    }
+    
+    .contact h1 {
+        font-family: chalk;
+        text-align: center;
+        padding: 10px;
+        font-size: 2.0em;
+        margin: 0 auto;
+    }
+    
+    .contact ul {
+        margin: 20px 5px;
+        list-style: none;
+    }
+    
+    .contact li {
+        margin: 5px 0;
+    }
+    
+    .call-icon {
+        position: relative;
+        top: 70px;
+        left: -80px;
+        color: #c9c6c6;
+    }
+    
+    .call h2 {
+        color: #00a0d5;
+    }
+    
+    .address h2 {
+        color: limegreen;
+    }
+    
+    .address-icon {
+        position: relative;
+        top: 10px;
+        left: -80px;
+        color: #c9c6c6;
+    }
+    
+    .address {
+        position: relative;
+        top: -70px;
+        left: 12px
+    }
+    
+    .facebook {
+        position: relative;
+        top: -70px;
+        left: -23px;
+    }
+    
+    .facebook p {
+        position: relative;
+        top: -35px;
+        left: 45px;
+    }
+    
+    .fa-facebook-square {
+        color: #c9c6c6;
+    }
+    
+    .facebook a:hover {
+        color: #00a0d5;
+    }
+    
+    .yelp {
+        position: relative;
+        top: -95px;
+        left: -37px;
+    }
+    
+    .yelp p {
+        position: relative;
+        top: -45px;
+        left: 45px;
+    }
+    
+    .yelp a:hover {
+        color: #00a0d5;
+    }
+    
+    .hours {
+        width: 25%;
+        margin: 40px 20px 20px 20px;
+        border-radius: 5px;
+        position: relative;
+        left: -20px;
+    }
+    
+    .hours-underline {
+        width: 100%;
+        position: relative;
+        top: -15px;
+        left: 15px;
+    }
+    
+    .hours h1 {
+        font-family: chalk;
+        text-align: center;
+        padding: 10px;
+        font-size: 2.0em;
+        margin: 0 auto;
+        position: relative;
+        left: 20px;
+    }
+    
+    .hours li {
+        margin: 20px 5px;
+        list-style: none;
+        position: relative;
+        top: -10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .hours li:first-child h3 {
+        position: relative;
+        left: 20px;
+    }
+    
+    .hours li:first-child h2 {
+        color: #ef4852;
+    }
+    
+    .hours li:nth-child(2) h3 {
+        position: relative;
+        left: 42px;
+    }
+    
+    .hours li:nth-child(2) h2 {
+        color: darkorange;
+    }
+    
+    .hours li:nth-child(3) h3 {
+        position: relative;
+        left: 39px;
+    }
+    
+    .hours li:nth-child(3) h2 {
+        color: #fef200;
+    }
+    
+    .map {
+        width: 40%;
+        height: 400px;
+        margin: 40px 20px 20px 20px;
+        border-radius: 5px;
+    }
+    
+    .map-wrapper {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    #embed-map-canvas {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #embed-map-canvas img {
+        max-width: none!important;
+        background: none!important;
+    }
+    /********  Footer  **********/
+    
+    .footer {
+        background-color: black;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .footer span {
+        font-family: signiture;
+        font-size: 1.5em;
+        color: seagreen;
+    }
+    /********  slick.min.css  **********/
+    /********  end slick.min.css  *******/
+    /********  slick-theme.css  *****/
+    /****  end slick-theme.css  *****/
+    /********  Media Queries  **********/
+    /* Large screens up to 1830px ----------- */
+    
+    @media (max-width: 1830px) {
+        /** About **/
+        .about-us {}
+        .gallery {}
+        .specials {}
+        /** findUs **/
+    }
+    /* Mid size screens up to 1550px ----------- */
+    
+    @media (max-width: 1550px) {
+        /** About **/
+        .about-us {}
+        .gallery {}
+        .specials {}
+        /** findUs **/
+    }
+    /* Mid size screens up to 1265px ----------- */
+    
+    @media (max-width: 1265px) {
+        /**Unslider**/
+        .slider img {
+            max-height: 300px;
+        }
+        .slider {
+            margin-top: 40px;
+        }
+        /** findUs **/
+    }
+    /* Screens up to 1120px ----------- */
+    
+    @media (max-width: 1120px) {
+        .header-social {
+            top: 10px;
+            right: 5px;
+        }
+        .slider img {
+            max-height: 250px;
+        }
+        .slider {
+            margin-top: 80px;
+        }
+    }
+    /* Screens up to 1050px ----------- */
+    
+    @media (max-width: 1050px) {
+        .title h1 {
+            font-size: 4.3em;
+        }
+        .title-underline {
+            top: 26px;
+        }
+        /** About **/
+        .about-us h3,
+        .specials h3 {
+            font-size: 1em;
+        }
+        .about-us {
+            min-width: 240px;
+        }
+        .specials {
+            min-width: 220px;
+        }
+    }
+    /* Screens up to 945px ----------- */
+    
+    @media (max-width: 945px) {
+        /********  Header  **********/
+        .header {
+            height: 200px;
+        }
+        .title h1 {
+            padding-bottom: 50px;
+            font-size: 4em;
+        }
+        .title-underline {
+            top: 20px;
+        }
+        .eraser {
+            top: 157px;
+        }
+        .chalk {
+            top: 151px;
+        }
+        .chalk-two {
+            top: 166px;
+        }
+        .quote {
+            left: 20px;
+        }
+        .header-social {
+            width: 150px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: row;
+            flex-flow: row;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -ms-flex-line-pack: center;
+            align-content: center;
+        }
+        .header-call-icon,
+        .header-address-icon {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            color: #c9c6c6;
+        }
+        .header-call-icon {
+            position: relative;
+            top: -10px;
+            left: 8px;
+        }
+        .header-address-icon {
+            position: relative;
+            top: 5px;
+            left: 0px;
+        }
+        .header-social img {
+            position: relative;
+            right: 0px;
+            width: 40px;
+        }
+        .header-social span {
+            display: none;
+        }
+        .header-social p {
+            display: none;
+        }
+        /** About **/
+        .flex-container {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .about-wrapper {
+            height: 100%;
+        }
+        .about-us {
+            width: 40%;
+            margin: 10px auto;
+        }
+        .gallery {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+            order: 3;
+        }
+        .specials {
+            width: 40%;
+            margin: 10px auto;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+        }
+        .slider {
+            margin-top: 10px;
+        }
+        .about-us h3,
+        .specials h3 {
+            font-size: 1.2em;
+        }
+        /********  Footer  **********/
+        .map {
+            display: none;
+        }
+        .findUs {
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            height: 430px;
+        }
+        .contact {
+            width: 40%;
+        }
+        .hours {
+            width: 40%;
+        }
+    }
+    /* Screens up to 800px ----------- */
+    
+    @media (max-width: 800px) {
+        .title h1 {
+            font-size: 3em;
+        }
+        .title-underline {
+            top: 29px;
+        }
+    }
+    /* Screens up to 750px ----------- */
+    
+    @media (max-width: 750px) {
+        /** About **/
+        .about-us,
+        .specials {
+            min-width: 45%;
+        }
+    }
+    /* Screens up to 700px ----------- */
+    
+    @media (max-width: 700px) {
+        .title h1 {
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 4em;
+        }
+        .header {
+            height: 210px;
+        }
+        .title-underline {
+            top: -10px;
+        }
+        .eraser {
+            top: 168px;
+            left: 95px;
+        }
+        .chalk {
+            top: 162px;
+            left: 163px;
+        }
+        .chalk-two {
+            top: 177px;
+            left: 195px;
+        }
+    }
+    /* Screens up to 650px ----------- */
+    
+    @media (max-width: 650px) {
+        /** About **/
+        .about-us,
+        .specials,
+        .gallery {
+            min-width: 95%;
+        }
+        .quote {
+            left: 4px;
+        }
+        .slider {
+            width: 85%;
+        }
+        /********  Footer  **********/
+    }
+    /* Screens up to 600px ----------- */
+    
+    @media (max-width: 600px) {
+        /********  Footer  **********/
+        /********  Wrap hours below find us here. What is overflowing?  **********/
+        .findUs {
+            -ms-flex-flow: column;
+            flex-flow: column;
+            height: 100%;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -ms-grid-row-align: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .contact,
+        .hours {
+            margin: 10px;
+            width: 300px;
+        }
+        .hours {
+            left: -10px;
+        }
+        .hours li {
+            top: -50px;
+        }
+    }
+    /* Screens up to 580px ----------- */
+    
+    @media (max-width: 580px) {
+        .header {
+            height: 270px;
+        }
+        .title h1 {
+            padding-top: 30px;
+        }
+        .title-underline {
+            top: 5px;
+        }
+        .eraser {
+            top: 228px;
+            left: 35px;
+        }
+        .chalk {
+            top: 223px;
+            left: 103px;
+        }
+        .chalk-two {
+            top: 237px;
+            left: 135px;
+        }
+        .quote {
+            left: 4px;
+        }
+    }
+    /* Screens up to 500px ----------- */
+    
+    @media (max-width: 500px) {
+        .quote {
+            display: none;
+        }
+    }
+    /* Screens up to 415px ----------- */
+    
+    @media (max-width: 415px) {
+        .slider img {
+            width: 300px;
+        }
+        .gallery {
+            margin: 7px;
+        }
+    }
