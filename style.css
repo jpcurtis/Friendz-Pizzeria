@@ -10,7 +10,9 @@ body {
     /* for firefox */
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+         flex: 0 0 100%;
 }
 
 body {
@@ -84,18 +86,27 @@ a:visited {}
     background-color: black;
     background-image: url(/images/chalkboard-background.jpg);
     background-position: center center;
-    background-size: 100% auto;
+    -moz-background-size: 100% auto;
+      -o-background-size: 100% auto;
+         background-size: 100% auto;
     background-repeat: no-repeat;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     text-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+         justify-content: center;
     -ms-flex-flow: column;
+    -webkit-flex-flow: column;
     flex-flow: column;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     z-index: 10;
 }
 
@@ -194,21 +205,45 @@ About/Gallery
 .about-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+         justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+         align-items: center;
     background-color: grey;
     background-image: url(/images/tie-dye2450x1105.jpg);
     background-position: center center;
-    background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-    height: 650px;
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     width: 100%;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    width: 95%;
+    position: relative;
+    margin: 30px;
+    z-index: 0;
 }
 
 .blur {
@@ -217,24 +252,19 @@ About/Gallery
     height: 100%;
     background-color: black;
     opacity: 0.7;
-    filter: alpha(opacity=70);
     z-index: -1;
-    border-radius: 5px;
-}
-
-.flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    height: 85%;
-    position: relative;
-    z-index: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+         border-radius: 5px;
 }
 
 .about-us {
-    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    -moz-box-flex: 1;
+         flex: 1;
+    min-width: 310px;
     border: 1px solid whitesmoke;
     margin: 10px;
 }
@@ -242,16 +272,19 @@ About/Gallery
 .about-wrapper h1 {
     font-family: chalk;
     text-align: center;
-    padding-top: 30px;
-    padding: 10px 0;
+    padding-top: 20px;
 }
 
 .about-wrapper h3 {
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .menu {
     text-align: center;
+}
+
+.menu h1 {
+    padding: 0;
 }
 
 .menu p {
@@ -259,7 +292,7 @@ About/Gallery
     font-size: 6.5em;
     position: relative;
     top: -60px;
-    height: 30px;
+    height: 20px;
     padding-bottom: 10px;
 }
 
@@ -267,10 +300,15 @@ About/Gallery
 /*    Gallery*/
 
 .gallery {
-    flex: 3;
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    -moz-box-flex: 3;
+         flex: 3;
     border: 1px solid whitesmoke;
+    min-width: 440px;
+    overflow: hidden;
     margin: 10px;
-    min-width: 0px;
 }
 
 .slider {
@@ -297,14 +335,19 @@ About/Gallery
 .findUs {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -ms-flex-flow: row;
+    -webkit-flex-flow: row;
     flex-flow: row;
     height: 100%;
     background-color: grey;
     background-image: url(/images/chalkboard-background.jpg);
     background-position: center center;
-    background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
     font-family: myFont;
 }
 
@@ -312,7 +355,9 @@ About/Gallery
     width: 25%;
     height: 400px;
     margin: 40px 20px 20px 20px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+         border-radius: 5px;
 }
 
 .contact-underline {
@@ -326,14 +371,20 @@ About/Gallery
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -ms-flex-flow: column;
+    -webkit-flex-flow: column;
     flex-flow: column;
     -ms-flex-line-pack: center;
+    -webkit-align-content: center;
     align-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+         align-items: center;
     position: relative;
     top: -85px;
     left: 25px;
@@ -423,7 +474,9 @@ About/Gallery
 .hours {
     width: 25%;
     margin: 40px 20px 20px 20px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+         border-radius: 5px;
     position: relative;
     left: -20px;
 }
@@ -452,13 +505,19 @@ About/Gallery
     top: -10px;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+         justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+         align-items: center;
 }
 
 .hours li:first-child h3 {
@@ -492,7 +551,9 @@ About/Gallery
     width: 40%;
     height: 400px;
     margin: 40px 20px 20px 20px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+         border-radius: 5px;
 }
 
 .map-wrapper {
@@ -528,3 +589,70 @@ About/Gallery
     font-size: 1.5em;
     color: seagreen;
 }
+
+/******************************
+  Media Queries  Desktop First
+*******************************/
+
+
+/* Large screens up to 1830px ----------- */
+@media (max-width: 1830px) {}
+/* Mid size screens up to 1550px ----------- */
+@media (max-width: 1550px) {}
+/* Mid size screens up to 1265px ----------- */
+@media (max-width: 1265px) {}
+/* Screens up to 1120px ----------- */
+@media (max-width: 1120px) {}
+/* Screens up to 1050px ----------- */
+@media (max-width: 1050px) {}
+/* Screens up to 945px ----------- */
+@media (max-width: 945px) {}
+/* Screens up to 863px ----------- */
+@media (max-width: 863px) {
+    
+    .about-us {
+    min-width: 0;
+        display: block;
+}
+    
+    /**Slider**/
+    .gallery {
+        min-width: 90%;
+        display: block;
+    }
+    
+        .slider img {}
+        .slider {
+            margin-top: 40px;
+        }
+    .about-wrapper {
+        height: auto;
+    }
+    .flex-container {
+        -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+        -webkit-flex-flow: column;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        display: block;
+    }
+    
+    .map {
+        display: none;
+    }
+}
+/* Screens up to 750px ----------- */
+@media (max-width: 750px) {}
+/* Screens up to 700px ----------- */
+@media (max-width: 700px) {}
+/* Screens up to 650px ----------- */
+@media (max-width: 650px) {}
+/* Screens up to 600px ----------- */
+@media (max-width: 600px) {}
+/* Screens up to 580px ----------- */
+@media (max-width: 580px) {}
+/* Screens up to 500px ----------- */
+@media (max-width: 500px) {}
+/* Screens up to 415px ----------- */
+@media (max-width: 415px) {}
