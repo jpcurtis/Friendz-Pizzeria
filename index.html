@@ -11,9 +11,6 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <!-- Normalize.CSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-
     <!-- Slider CSS -->
     <link rel="stylesheet" type="text/css" href="slick/slick.min.css" />
     <!--// Add slick-theme.css for default styling-->
@@ -48,25 +45,41 @@
                 <br> pizza! </p>
         </div>
         <div class="header-social">
+
+
             <a href="https://www.facebook.com/friendzpizzeria/"><img src="/images/facebookChalkIcon64x64.png" alt="ChalkIcon" width="60"><span>acebook</span></a>
-            <a href="#call">
+
+
+
+            <a href="tel:3073581934">
                 <p>(307) 358-1934</p>
-                <div class="header-call-icon">
-                    <i class="fa fa-phone-square fa-2x"></i>
-                </div>
             </a>
+
+
             <a href="http://maps.google.com/?q=120+N+2nd+St+Douglas,+WY+82633">
                 <p>120 N 2nd St,
                     <br> Douglas, WY 82633</p>
             </a>
 
-            <div class="header-address-icon">
-                <a href="http://maps.google.com/?q=120+N+2nd+St+Douglas,+WY+82633">
-                    <i class="fa fa-map-marker fa-2x"></i>
-                </a>
-            </div>
-
         </div>
+        <div class="icons">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/friendzpizzeria/"><img src="/images/facebookChalkIcon64x64.png" alt="ChalkIcon" width="30" height="30">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:3073581934">
+                            <i class="fa fa-phone-square fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://maps.google.com/?q=120+N+2nd+St+Douglas,+WY+82633">
+                            <i class="fa fa-map-marker fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
     </div>
     <!--About-->
     <div class="about-wrapper">
@@ -112,101 +125,67 @@
 
 
     <div class="findUs">
+        <div class="findUs-wrapper">
+            <div class="contact">
 
-        <div class="contact">
-            <h1>Find Us</h1>
-
-
-
-            <div class="contact-container">
+                <h1>Find Us</h1>
                 <!--Footer Underline (FindUs)-->
                 <img class="contact-underline" alt="underline" width="300" height="60" src="/images/ornaments-08.png">
-
-
-
-
-                <div class="call-icon">
-                    <i class="fa fa-phone-square fa-2x"></i>
-                </div>
-
-
-
-                <ul class="call">
-                    <li>
-                        <h2>Call:</h2></li>
-
-                    <li><a name="call">(307) 358-1934</a></li>
-                </ul>
-
-
-
-
-                <div class="address-icon">
-                    <i class="fa fa-map-marker fa-2x"></i>
-                </div>
-
-
-
-                <ul class="address">
-                    <li>
+                <ul class="contact-list fa-ul">
+                    <li class="call">
+                        <i class="fa-li fa fa-mobile fa-2x"></i>
+                        <h2>Call:</h2>
+                        <a name="call">(307) 358-1934</a>
+                    </li>
+                    <li class="address">
+                        <i class="fa-li fa fa-map-marker fa-2x"></i>
                         <h2>Address:</h2>
+                        <a href="http://maps.google.com/?q=120+N+2nd+St+Douglas,+WY+82633"> 120 N 2nd St,<br> Douglas, WY 82633</a>
                     </li>
-                    <li><a href="http://maps.google.com/?q=120+N+2nd+St+Douglas,+WY+82633"> 120 N 2nd St,<br> Douglas, WY 82633</a>
+                    <li class="facebook">
+                        <i class="fa-li fa fa-facebook-square fa-2x"></i>
+                        <a href="https://www.facebook.com/friendzpizzeria/">
+                            <p>Check out more of our
+                                <br> specials and pictures.</p>
+                        </a>
+                    </li>
+                    <li class="yelp">
+                        <i class="fa-li fa fa-yelp fa-2x"></i>
+                        <a href="http://www.yelp.com/biz/friendz-douglas">
+                            <p>Read our five star
+                                <br/> reviews on Yelp!</p>
+                        </a>
+                </ul>
+            </div>
+
+            <div class="map">
+                <!-- Google Map -->
+                <!-- From embed-map.com Change address to Friendz when fixed -->
+                <div class="map-wrapper">
+                    <div id="embed-map-canvas">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=120+N+2nd+St,+Douglas,+WY+82633,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+                    </div><a class="google-map-html" href="https://www.hostingreviews.website/inmotion-hosting-review" id="enable-map-data">inmotion hosting</a>
+                </div>
+            </div>
+            <div class="hours">
+                <h1>Hours</h1>
+                <!--Footer Underline (Contact)-->
+                <img class="hours-underline" alt="underline" width="300" height="60" src="/images/ornaments-08.png">
+                <ul>
+                    <li>
+                        <h2>Mon-Fri:</h2>
+                        <h3> 2:00 pm - 9:00 pm</h3>
+                    </li>
+                    <li>
+                        <h2>Sat: </h2>
+                        <h3> 11:00 am - 9:00 pm </h3>
+                    </li>
+                    <li>
+                        <h2>Sun: </h2>
+                        <h3> 11:00 am - 8:00 pm </h3>
                     </li>
                 </ul>
-
-
-
-
-                <div class="facebook">
-                    <a href="https://www.facebook.com/friendzpizzeria/"><i class="fa fa-facebook-square fa-2x"></i>
-                            <p>Check out more of our
-                                <br> specials and pictures</p>.</a>
-                </div>
-
-
-
-
-
-                <div class="yelp">
-                    <a href="http://www.yelp.com/biz/friendz-douglas"><img alt="yelp" width="30" height="40" src="/images/yelp2.png">
-                        <p>Read our five star
-                            <br/> reviews on Yelp!</p>
-                    </a>
-                </div>
-
-
-
             </div>
-        </div>
-
-        <div class="map">
-            <!-- Google Map -->
-            <!-- From embed-map.com Change address to Friendz when fixed -->
-            <div class="map-wrapper">
-                <div id="embed-map-canvas">
-                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=120+N+2nd+St,+Douglas,+WY+82633,+United+States&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
-                </div><a class="google-map-html" href="https://www.hostingreviews.website/inmotion-hosting-review" id="enable-map-data">inmotion hosting</a>
-            </div>
-        </div>
-        <div class="hours">
-            <h1>Hours</h1>
-            <!--Footer Underline (Contact)-->
-            <img class="hours-underline" alt="underline" width="300" height="60" src="/images/ornaments-08.png">
-            <ul>
-                <li>
-                    <h2>Mon-Fri:</h2>
-                    <h3> 2:00 pm - 9:00 pm</h3>
-                </li>
-                <li>
-                    <h2>Sat: </h2>
-                    <h3> 11:00 am - 9:00 pm </h3>
-                </li>
-                <li>
-                    <h2>Sun: </h2>
-                    <h3> 11:00 am - 8:00 pm </h3>
-                </li>
-            </ul>
         </div>
     </div>
 
@@ -227,7 +206,7 @@
 
     <!-- Scripts -->
 
-     <!-- Slider Script -->
+    <!-- Slider Script -->
 
 
     <script type="text/javascript">
